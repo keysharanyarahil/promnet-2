@@ -1,0 +1,123 @@
+*{
+   margin: 1;
+   padding: 0; 
+}
+
+#judul{
+    font-size: 40px;
+}
+
+body{
+    background-color: rgb(244, 187, 215);
+    color: rgb(152, 21, 97);
+    line-height: 1.6;
+    font-family: georgia;
+}
+
+p{
+    font-family: garamond;
+    font-size: x-large;
+    text-align: center;
+}
+
+h3{
+    font-size: x-large;
+    text-align: center;
+}
+
+@keyframes softPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+#judul, 
+h3,
+h2 {
+    text-align: center;
+    color: rgb(152, 21, 97);
+    animation: softPulse 2.5s ease-in-out infinite;
+}
+
+nav {
+    display: inline-flex;
+    gap: 8px;
+    background: #efffba;
+    padding: 8px 14px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(140, 40, 90, 0.08);
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    position: relative; 
+    color: #a01862;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 9px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;               
+    bottom: 2px;              
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #8b1853; 
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 70%;               
+}
+
+nav a.active::after {
+    width: 70%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+@keyframes kelapKelip {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 2px #f8bbd0;
+  }
+  50% {
+    opacity: 0.3;
+    text-shadow: 0 0 10px #f48fb1, 0 0 15px #800040;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: #f8bbd0;
+    box-shadow: 0 0 8px rgba(248, 187, 208, 0.5);
+  }
+  50% {
+    border-color: #800040;
+    box-shadow: 0 0 15px rgba(128, 0, 64, 0.4);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
